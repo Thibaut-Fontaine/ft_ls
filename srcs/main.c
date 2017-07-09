@@ -6,15 +6,15 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 02:43:28 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/09 06:00:48 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/09 17:29:07 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ls.h"
-#include <stdio.h>
+
 int				main(int argc, const char *argv[])
 {
-	t_all	all;
+	t_all		all;
 
 	all = parse(argc, argv);
 	while (all.n_path)
