@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 03:07:22 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/09 04:49:48 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/09 05:59:36 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ inline int		check_flag(const char *s)
 	int		ret;
 
 	if (s[0] != '-')
-		return (_PATH_);
+		return (PATH_);
 	++s;
 	ret = 0;
 	while (*s)
 	{
 		if (*s == 'l')
-			ret |= _LST_;
+			ret |= LST_;
 		else if (*s == 'a')
-			ret |= _ALL_;
+			ret |= ALL_;
 		else if (*s == 'r')
-			ret |= _REV_;
+			ret |= REV_;
 		else if (*s == 'R')
-			ret |= _REC_;
+			ret |= REC_;
 		else if (*s == 't')
-			ret |= _TIM_;
+			ret |= TIM_;
 		else
 			error_flag(*s);
 		++s;
@@ -45,12 +45,15 @@ inline t_all		parse(int argc, const char *argv[])
 	int		tmp;
 	int		n;
 
+	all.flag = 0;
+	all.path = NULL;
+	all.n_path = 0;
 	n = 0;
 	++argv;
 	--argc;
 	while (n < argc)
 	{
-		if ((tmp = check_flag(argv[n])) == _PATH_)
+		if ((tmp = check_flag(argv[n])) == PATH_)
 			break ;
 		else
 			all.flag |= tmp;
