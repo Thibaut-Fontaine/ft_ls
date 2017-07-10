@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 02:44:04 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/10 05:59:15 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/10 08:23:51 by jocarol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LS_H
 
 # include "../libft/includes/libft.h"
+# include "dirent.h"
 
 /*
 ** flags
@@ -26,12 +27,14 @@
 # define TIM_ (1 << 4)
 # define PATH_ (1 << 6)
 
-typedef struct
+typedef struct		s_all
 {
-	int			flag;
-	const char	**path;
-	int			n_path;
-}				t_all;
+	int				flag;
+	const char		**path;
+	int				n_path;
+	unsigned char	type;
+	char			*name;
+}					t_all;
 
 void		error_flag(const char option);
 void		error_path(const char *filename);
