@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 02:44:04 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/09 05:56:18 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/10 05:59:15 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LS_H
 
 # include "../libft/includes/libft.h"
-# define _
+
 /*
 ** flags
 */
