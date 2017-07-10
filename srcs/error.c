@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 03:54:53 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/09 04:56:42 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/10 05:38:03 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	error_path(const char *filename)
 	write(1, "ls: ", 4);
 	write(1, filename, ft_strlen(filename));
 	write(1, ": No such file or directory", 27);
-	exit(-1);
 }
 
 void	error_flag(const char option)
