@@ -15,6 +15,7 @@
 
 # include "../libft/includes/libft.h"
 # include "dirent.h"
+# include <sys/stat.h>
 
 /*
 ** flags
@@ -29,12 +30,14 @@
 
 typedef struct		s_all
 {
-	int				flag;
-	const char		**path;
-	int				n_path;
-	unsigned char	type;
-	char			*name;
-}					t_all;
+	int				      flag;
+	const char		  **path;
+	int				      n_path;
+	unsigned char	  type;
+  struct stat     *st_stat;
+  struct dirent   *st_dir;
+	char			      *name;
+}					        t_all;
 
 void		error_flag(const char option);
 void		error_path(const char *filename);
