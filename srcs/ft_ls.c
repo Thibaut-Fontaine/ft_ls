@@ -33,7 +33,7 @@ static void 			fill_all(const char *path, t_all *all)
   //printf("%ju\n", (uintmax_t)all->st_stat->st_ino);
 }
 
-static void	  		ft_ls(const char *path, t_all *all)
+static void	  		ft_ls(const char *path, t_all all)
 {
   DIR			        *dir;
   
@@ -44,8 +44,8 @@ static void	  		ft_ls(const char *path, t_all *all)
   {
     ft_putstr(path);
     ft_putendl(":");
-    while ((all->st_dir = readdir(dir)))
-      fill_all(path, all); 
+    while ((all.st_dir = readdir(dir)))
+      fill_all(path, &all); 
     closedir(dir);
   }
 }
