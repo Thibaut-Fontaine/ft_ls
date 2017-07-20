@@ -30,6 +30,12 @@
 # define PATH_		(1 << 6)
 # define TILD_		(1 << 7)
 
+typedef struct		s_file
+{
+	struct dirent	*file;
+	struct s_file	*nxt;
+}					t_file;
+
 typedef struct
 {
 	int				flag;
