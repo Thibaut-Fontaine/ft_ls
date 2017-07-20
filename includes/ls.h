@@ -26,7 +26,9 @@
 # define REC_ (1 << 2)
 # define REV_ (1 << 3)
 # define TIM_ (1 << 4)
+
 # define PATH_ (1 << 6)
+# define TILD_ (1 << 7)
 
 typedef struct		s_all
 {

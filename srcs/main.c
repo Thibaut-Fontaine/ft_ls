@@ -24,14 +24,14 @@ int				main(int argc, const char *argv[])
 		ft_putstr("\n");
 	}
 	if (all.flag & ALL_)
-		ft_putstr("all ");
+		ft_putstr("all \n");
 	if (all.flag & LST_)
-		ft_putstr("lst ");
+		ft_putstr("lst \n");
 	if (all.flag & REC_)
-		ft_putstr("rec ");
+		ft_putstr("rec \n");
 	if (all.flag & REV_)
-		ft_putstr("rev ");
+		ft_putstr("rev \n");
 	if (all.flag & TIM_)
-		ft_putstr("time ");
+		ft_putstr("time \n");
 	return (0);
 }

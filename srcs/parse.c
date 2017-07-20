@@ -18,6 +18,8 @@ inline int			check_flag(const char *s)
 
 	if (s[0] != '-')
 		return (PATH_);
+	if (s[1] == '-' && s[2] == '\0')
+		return (TILD_);
 	++s;
 	ret = 0;
 	while (*s)
@@ -55,6 +57,12 @@ inline t_all		parse(int argc, const char *argv[])
 	{
 		if ((tmp = check_flag(argv[n])) == PATH_)
 			break ;
+		else if (tmp == TILD_)
+		{
+			++argv;
+			--argc;
+			break ;
+		}
 		else
 			all.flag |= tmp;
 		++n;
