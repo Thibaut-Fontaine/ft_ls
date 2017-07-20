@@ -21,29 +21,29 @@
 ** flags
 */
 
-# define ALL_ (1 << 0)
-# define LST_ (1 << 1)
-# define REC_ (1 << 2)
-# define REV_ (1 << 3)
-# define TIM_ (1 << 4)
+# define ALL_		(1 << 0)
+# define LST_		(1 << 1)
+# define REC_		(1 << 2)
+# define REV_		(1 << 3)
+# define TIM_		(1 << 4)
 
-# define PATH_ (1 << 6)
-# define TILD_ (1 << 7)
+# define PATH_		(1 << 6)
+# define TILD_		(1 << 7)
 
-typedef struct		s_all
+typedef struct
 {
-	int				      flag;
-	const char		  **path;
-	int				      n_path;
-	unsigned char	  type;
-  struct stat     *st_stat;
-  struct dirent   *st_dir;
-	char			      *name;
-}					        t_all;
+	int				flag;
+	const char		**path;
+	int				n_path;
+	unsigned char	type;
+	struct stat		*st_stat;
+	struct dirent	*st_dir;
+	char			*name;
+}					t_all;
 
-void		error_flag(const char option);
-void		error_path(const char *filename);
-t_all		parse(int argc, const char *argv[]);
-int			check_flag(const char *s);
+void				error_flag(const char option);
+void				error_path(const char *filename);
+t_all				parse(int argc, const char *argv[]);
+int					check_flag(const char *s);
 
 #endif

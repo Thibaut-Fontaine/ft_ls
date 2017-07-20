@@ -17,6 +17,11 @@ int				main(int argc, const char *argv[])
 	t_all		all;
 
 	all = parse(argc, argv);
+	
+	
+	
+	// test :
+	/*
 	while (all.n_path)
 	{
 		--all.n_path;
@@ -33,5 +38,6 @@ int				main(int argc, const char *argv[])
 		ft_putstr("rev \n");
 	if (all.flag & TIM_)
 		ft_putstr("time \n");
+	*/
 	return (0);
 }
