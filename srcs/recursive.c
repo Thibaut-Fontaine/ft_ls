@@ -18,7 +18,7 @@ t_file		*get_filelist(const char *path)
 	head = generate_link();
 	list = head;
 	dir = opendir(path);
-	while (list->file = readdir(dir))
+	while ((list->file = readdir(dir)))
 	{
 		list->nxt = generate_link();
 		list = list->nxt;
