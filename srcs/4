@@ -1,9 +1,0 @@
-#include <../includes/ls.h>
-
-get_filelist(const char *path)
-{
-	DIR *	dir;
-
-	dir = opendir(path);
-	
-}
