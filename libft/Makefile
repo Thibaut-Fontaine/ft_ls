@@ -6,7 +6,7 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 04:52:55 by tfontain          #+#    #+#              #
-#    Updated: 2017/05/23 15:11:07 by tfontain         ###   ########.fr        #
+#    Updated: 2017/08/04 00:19:34 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,15 +44,18 @@ OBJ = $(addsuffix .o,$(basename $(SRC)))
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+		@echo " - Making library"
+		@ar rc $(NAME) $(OBJ)
+		@ranlib $(NAME)
 
 %.o : %.c
-	$(CC) $(FLAG) $(OPTION) -c $< -o $@
+	@$(CC) $(FLAG) $(OPTION) -c $< -o $@
 
 clean :
-		rm -f $(OBJ)
+		@echo " - Cleaning lib objs"
+		@rm -f $(OBJ)
 fclean : clean
-		rm -f $(NAME)
+		@echo " - Cleaning library"
+		@rm -f $(NAME)
 
 re : fclean all

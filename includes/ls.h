@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 02:44:04 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/10 08:23:51 by jocarol          ###   ########.fr       */
+/*   Updated: 2017/08/03 22:11:38 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,10 @@ typedef struct
 	int				flag;
 	const char		**path;
 	int				n_path;
-	unsigned char	type;
-	struct stat		*st_stat;
-	struct dirent	*st_dir;
-	char			*name;
 }					t_all;
 
 void				error_flag(const char option);
 void				error_path(const char *filename);
 t_all				parse(int argc, const char *argv[]);
-int					check_flag(const char *s);
 
 #endif

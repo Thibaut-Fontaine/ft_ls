@@ -6,15 +6,15 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 03:07:22 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/09 17:26:11 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/08/03 22:01:45 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ls.h"
 
-inline int			check_flag(const char *s)
+static inline int			check_flag(const char *s)
 {
-	int				ret;
+	int						ret;
 
 	if (s[0] != '-')
 		return (PATH_);
@@ -41,11 +41,11 @@ inline int			check_flag(const char *s)
 	return (ret);
 }
 
-inline t_all		parse(int argc, const char *argv[])
+inline t_all				parse(int argc, const char *argv[])
 {
-	t_all			all;
-	int				tmp;
-	int				n;
+	t_all					all;
+	int						tmp;
+	int						n;
 
 	all.flag = 0;
 	all.path = NULL;
