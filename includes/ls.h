@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 02:44:04 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/25 05:29:52 by jocarol          ###   ########.fr       */
+/*   Updated: 2017/07/10 08:23:51 by jocarol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # define REC_		(1 << 2)
 # define REV_		(1 << 3)
 # define TIM_		(1 << 4)
+
 # define PATH_		(1 << 6)
 # define TILD_		(1 << 7)
 
@@ -38,7 +39,7 @@ typedef struct		s_file
 typedef struct
 {
 	int				flag;
-	const char		*path;
+	const char		**path;
 	int				n_path;
 	unsigned char	type;
 	struct stat		*st_stat;
