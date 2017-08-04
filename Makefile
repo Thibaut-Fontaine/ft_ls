@@ -6,7 +6,7 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/03 21:09:36 by tfontain          #+#    #+#              #
-#    Updated: 2017/08/04 00:29:46 by tfontain         ###   ########.fr        #
+#    Updated: 2017/08/04 04:53:46 by jocarol          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OBJS = $(addprefix $(OBJS_PATH), $(OBJS_NAME))
 
 LIBRARY_PATH = libft/
 
-LIBRARY = -lm -L $(LIBRARY_PATH) -lft -lncurses
+LIBRARY = -lm -L $(LIBRARY_PATH) -lft
 
 MFLAGS = -j
 
